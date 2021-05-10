@@ -33,6 +33,7 @@ set(DEC_FILES
     Dec/agspos.cpp Dec/agspos.h
     Dec/agsrot.h Dec/agsrot.cpp
     Dec/imapdec.h
+    Dec/tmapdecfilter.h
     )
 
 set(MAP_VIEW_FILES

@@ -3,17 +3,22 @@
 
 #include <QGraphicsScene>
 #include "imap.h"
+#include "sdfmap.h"
+#include "Dec/tmapdecfilter.h"
+#include "Views/MapView/cylinderview.h"
 
 namespace PsDO::Map
 {
-    class PsDoMap : public IMap
+    class PsDoMap : public IMap, public SDFMap
     {
         QGraphicsScene *scene = nullptr;
+        PsDO::Dec::TMapDecFilter<PsDO::Views::CylinderView> filter;
 
     public:
-        PsDoMap();
+        PsDoMap(QGraphicsScene *scene = nullptr);
         QGraphicsScene *getScene() override;
         void setScene(QGraphicsScene *newScene) override;
+        PsDO::SDF::ISDF *getSDF(qsizetype index) override;
     };
 }    // namespace PsDO::Map
 

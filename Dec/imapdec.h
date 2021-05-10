@@ -5,10 +5,10 @@
 
 namespace PsDO::Dec
 {
-    class IMapFilter
+    class IMapDec
     {
     public:
-        ~IMapFilter() = default;
+        ~IMapDec() = default;
 
         virtual QGraphicsScene *getScene() = 0;
         virtual void setScene(QGraphicsScene *newScene) = 0;
