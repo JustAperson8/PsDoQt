@@ -19,6 +19,7 @@ namespace PsDO::Map
         QGraphicsScene *getScene() override;
         void setScene(QGraphicsScene *newScene) override;
         PsDO::SDF::ISDF *getSDF(qsizetype index) override;
+        qsizetype size() override;
     };
 }    // namespace PsDO::Map
 

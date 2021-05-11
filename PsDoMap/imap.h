@@ -12,6 +12,7 @@ namespace PsDO::Map
 
         virtual QGraphicsScene *getScene() = 0;
         virtual void setScene(QGraphicsScene *newScene) = 0;
+        virtual qsizetype size() = 0;
     };
 }    // namespace PsDO::Map
 

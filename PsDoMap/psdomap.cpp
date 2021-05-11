@@ -20,3 +20,8 @@ PsDO::SDF::ISDF *PsDO::Map::PsDoMap::getSDF(qsizetype index)
 {
     return filter.getResult(index)->getSDF();
 }
+
+qsizetype PsDO::Map::PsDoMap::size()
+{
+    return scene->items().size();
+}
