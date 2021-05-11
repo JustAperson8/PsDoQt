@@ -8,7 +8,7 @@
 
 namespace PsDO::Views
 {
-    class CylinderView : public QObject, public QGraphicsItem, public ISDFMapVew
+    class CylinderView : public QObject, /*public QGraphicsItem,*/ public ISDFMapVew
     {
         Q_OBJECT
     private:

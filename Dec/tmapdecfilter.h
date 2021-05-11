@@ -2,11 +2,12 @@
 #define TMAPDECFILTER_H
 
 #include "imapdec.h"
+#include "imapdecfilter.h"
 
 namespace PsDO::Dec
 {
     template <class T>
-    class TMapDecFilter : public IMapDec
+    class TMapDecFilter : public IMapDec, public ImapDecFilter<T>
     {
     private:
         QGraphicsScene *m_scene;
@@ -22,7 +23,7 @@ namespace PsDO::Dec
             m_scene = newScene;
         }
 
-        T *getResult(qsizetype index)
+        T *getResult(qsizetype index) override
         {
             auto list = m_scene->items();
             if (index < list.size())

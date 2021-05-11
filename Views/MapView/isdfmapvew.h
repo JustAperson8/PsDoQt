@@ -2,10 +2,11 @@
 #define ISDFMAPVEW_H
 
 #include "SDFs/isdf.h"
+#include "QGraphicsItem"
 
 namespace PsDO::Views
 {
-    class ISDFMapVew
+    class ISDFMapVew : public QGraphicsItem
     {
     public:
         virtual ~ISDFMapVew() = default;

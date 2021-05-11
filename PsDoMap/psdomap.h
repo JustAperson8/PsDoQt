@@ -12,7 +12,7 @@ namespace PsDO::Map
     class PsDoMap : public IMap, public SDFMap
     {
         QGraphicsScene *scene = nullptr;
-        PsDO::Dec::TMapDecFilter<PsDO::Views::CylinderView> filter;
+        PsDO::Dec::TMapDecFilter<PsDO::Views::ISDFMapVew> filter;
 
     public:
         PsDoMap(QGraphicsScene *scene = nullptr);
