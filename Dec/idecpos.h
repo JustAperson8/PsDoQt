@@ -10,7 +10,7 @@ namespace PsDO::Dec
     public:
         virtual ~IDecPos() = default;
         virtual void setPos(const QPointF &p) = 0;
-        virtual QPointF getPos() = 0;
+        virtual QPointF getPos() const = 0;
         virtual void move(const QPointF &p) = 0;
     };
 

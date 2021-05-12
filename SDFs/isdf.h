@@ -3,13 +3,14 @@
 
 #include <QtGlobal>
 #include <QPointF>
+#include "psdoobject.h"
 
 namespace PsDO::SDF
 {
-    class ISDF
+    class ISDF : public PsDOObject
     {
     public:
-        virtual qreal getDistance(const QPointF &p) = 0;
+        virtual qreal getDistance(const QPointF &p) const = 0;
         virtual ~ISDF() = default;
     };
 }    // namespace PsDO::SDF

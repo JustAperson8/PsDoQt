@@ -8,7 +8,7 @@
 
 namespace PsDO::Views
 {
-    class CylinderView : public QObject, /*public QGraphicsItem,*/ public ISDFMapVew
+    class CylinderView : public QObject, /*public QGraphicsItem,*/ public ISDFMapView
     {
         Q_OBJECT
     private:
@@ -17,8 +17,8 @@ namespace PsDO::Views
     public:
         CylinderView(PsDO::SDF::Cylinder *sdf = nullptr, QObject *parent = nullptr);
 
-        PsDO::SDF::Cylinder *getSDF() override;
-        void setSDF(PsDO::SDF::ISDF *SDF = nullptr) override;
+        PsDO::SDF::Cylinder *getObject() override;
+        void setObject(PsDOObject *SDF = nullptr) override;
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
         QRectF boundingRect() const override;
     };

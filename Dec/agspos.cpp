@@ -5,7 +5,7 @@ PsDO::Dec::AGSPos::AGSPos(const QPointF &p)
 {
 }
 
-QPointF PsDO::Dec::AGSPos::get()
+QPointF PsDO::Dec::AGSPos::get() const
 {
     return m_pos;
 }

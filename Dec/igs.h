@@ -8,7 +8,7 @@ namespace PsDO::Dec
     {
     public:
         virtual ~IGetSet() = default;
-        virtual T get() = 0;
+        virtual T get() const = 0;
         virtual void set(const T &value) = 0;
         virtual void change(const T &value) = 0;
     };

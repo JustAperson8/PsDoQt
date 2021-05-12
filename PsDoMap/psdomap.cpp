@@ -13,12 +13,12 @@ QGraphicsScene *PsDO::Map::PsDoMap::getScene()
 void PsDO::Map::PsDoMap::setScene(QGraphicsScene *newScene)
 {
     scene = newScene;
-    filter.setScene(scene);
+    fSDF.setScene(scene);
 }
 
 PsDO::SDF::ISDF *PsDO::Map::PsDoMap::getSDF(qsizetype index)
 {
-    return filter.getResult(index)->getSDF();
+    return fSDF.getResult(index)->getObject();
 }
 
 qsizetype PsDO::Map::PsDoMap::size()

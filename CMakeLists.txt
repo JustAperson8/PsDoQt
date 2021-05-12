@@ -38,9 +38,11 @@ set(DEC_FILES
     )
 
 set(MAP_VIEW_FILES
+    Views/MapView/ipsdoobjectview.h
     Views/MapView/isdfmapvew.h
-    Views/MapView/cylinderview.cpp
-    Views/MapView/cylinderview.h
+    Views/MapView/imapuserview.h
+    Views/MapView/cylinderview.cpp Views/MapView/cylinderview.h
+#    Views/MapView/rangeringview.h Views/MapView/rangeringview.cpp
 )
 
 set(MAP_FILES
@@ -49,13 +51,21 @@ set(MAP_FILES
     PsDoMap/psdomap.h PsDoMap/psdomap.cpp
     )
 
+set(MAP_USER_FILES
+    MapUser/imapuser.h
+    MapUser/rangering.h MapUser/rangering.cpp
+    )
+
 add_library(PsDoLib STATIC
+    psdoconst.h
     qcomplex.cpp
+    psdoobject.h
     qcomplex.h
     ${SDFS_FILES}
     ${MAP_VIEW_FILES}
     ${DEC_FILES}
     ${MAP_FILES}
+    ${MAP_USER_FILES}
    )
 
 target_link_libraries(PsDoLib PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

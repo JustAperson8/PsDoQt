@@ -7,12 +7,12 @@ PsDO::Views::CylinderView::CylinderView(PsDO::SDF::Cylinder *sdf, QObject *paren
     m_sdf = sdf;
 }
 
-PsDO::SDF::Cylinder *PsDO::Views::CylinderView::getSDF()
+PsDO::SDF::Cylinder *PsDO::Views::CylinderView::getObject()
 {
     return m_sdf;
 }
 
-void PsDO::Views::CylinderView::setSDF(PsDO::SDF::ISDF *SDF)
+void PsDO::Views::CylinderView::setObject(PsDO::PsDOObject *SDF)
 {
     m_sdf = dynamic_cast<PsDO::SDF::Cylinder *>(SDF);
 }

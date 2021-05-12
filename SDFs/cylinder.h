@@ -18,12 +18,12 @@ namespace PsDO::SDF
         Cylinder(const QPointF &pos, qreal radius = 0);
         ~Cylinder();
 
-        qreal getDistance(const QPointF &p) override;
+        qreal getDistance(const QPointF &p) const override;
 
         void setRadius(qreal r);
-        qreal getRadius();
+        qreal getRadius() const;
 
-        QPointF getPos() override;
+        QPointF getPos() const override;
         void setPos(const QPointF &p) override;
         void move(const QPointF &p) override;
     };

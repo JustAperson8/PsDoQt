@@ -10,7 +10,7 @@ PsDO::Dec::AGSRot::AGSRot(qreal angle)
 {
 }
 
-QPointF PsDO::Dec::AGSRot::get()
+QPointF PsDO::Dec::AGSRot::get() const
 {
     return m_rot;
 }

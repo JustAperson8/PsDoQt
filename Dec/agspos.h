@@ -13,10 +13,9 @@ namespace PsDO::Dec
 
     public:
         AGSPos(const QPointF &p = { 0, 0 });
-        QPointF get() override;
+        QPointF get() const override;
         void set(const QPointF &value) override;
         void change(const QPointF &value) override;
-        void test();
     };
 }    // namespace PsDO::Dec
 

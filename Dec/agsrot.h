@@ -15,7 +15,7 @@ namespace PsDO::Dec
     public:
         AGSRot(const QPointF &r);
         AGSRot(qreal angle);
-        QPointF get() override;
+        QPointF get() const override;
         void set(const QPointF &value) override;
         void change(const QPointF &value) override;
         void rotate(qreal angle);

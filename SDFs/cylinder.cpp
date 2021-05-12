@@ -11,7 +11,7 @@ PsDO::SDF::Cylinder::~Cylinder()
     delete m_pos;
 }
 
-qreal PsDO::SDF::Cylinder::getDistance(const QPointF &p)
+qreal PsDO::SDF::Cylinder::getDistance(const QPointF &p) const
 {
     const QPointF &minus = p - m_pos->get();
     return abs(minus) - radius;
@@ -22,12 +22,12 @@ void PsDO::SDF::Cylinder::setRadius(qreal r)
     radius = r;
 }
 
-qreal PsDO::SDF::Cylinder::getRadius()
+qreal PsDO::SDF::Cylinder::getRadius() const
 {
     return radius;
 }
 
-QPointF PsDO::SDF::Cylinder::getPos()
+QPointF PsDO::SDF::Cylinder::getPos() const
 {
     return m_pos->get();
 }
