@@ -16,7 +16,7 @@ namespace PsDO::Views
         PsDO::MapUser::RangeRing *m_object;
 
     public:
-        RangeRingView(PsDOObject *object = nullptr);
+        RangeRingView(PsDOObject *object = nullptr, QObject *parent = nullptr);
         PsDO::MapUser::RangeRing *getObject() override;
         void setObject(PsDOObject *object = nullptr) override;
         QRectF boundingRect() const override;

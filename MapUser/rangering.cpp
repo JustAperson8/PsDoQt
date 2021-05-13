@@ -1,6 +1,6 @@
 #include "rangering.h"
 
-PsDO::MapUser::RangeRing::RangeRing(QPointF pos, Map::IMap *map)
+PsDO::MapUser::RangeRing::RangeRing(Map::IMap *map, QPointF pos)
 {
     this->pos = new PsDO::Dec::AGSPos(pos);
     this->map = static_cast<PsDO::Map::PsDoMap *>(map);

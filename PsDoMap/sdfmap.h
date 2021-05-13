@@ -3,6 +3,7 @@
 
 #include <QtCore>
 #include "SDFs/isdf.h"
+#include "imap.h"
 
 namespace PsDO::Map
 {

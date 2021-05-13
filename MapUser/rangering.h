@@ -14,7 +14,7 @@ namespace PsDO::MapUser
         PsDO::Dec::IGetSet<QPointF> *pos;
 
     public:
-        RangeRing(QPointF pos = { 0, 0 }, PsDO::Map::IMap *map = nullptr);
+        RangeRing(PsDO::Map::IMap *map = nullptr, QPointF pos = { 0, 0 });
         ~RangeRing();
         PsDO::Map::IMap *getMap() const override;
         void setMap(PsDO::Map::IMap *newMap) override;

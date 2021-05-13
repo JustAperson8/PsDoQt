@@ -1,7 +1,8 @@
 #include "rangeringview.h"
 #include <QPainter>
 
-PsDO::Views::RangeRingView::RangeRingView(PsDOObject *object)
+PsDO::Views::RangeRingView::RangeRingView(PsDOObject *object, QObject *parent)
+    : QObject(parent)
 {
     setObject(object);
 }
