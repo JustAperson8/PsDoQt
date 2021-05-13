@@ -23,9 +23,19 @@ void PsDO::MapUser::RangeRing::setMap(Map::IMap *newMap)
 
 qreal PsDO::MapUser::RangeRing::getMin() const
 {
-    qreal min = INFINITY;
+    qreal min = 1e9;
     for (qsizetype i = 0; i < map->size(); ++i)
-        min = std::min(min, map->getSDF(i)->getDistance(pos->get()));
+    {
+        try
+        {
+            auto sdf = map->getSDF(i);
+            if (sdf)
+                min = std::min(min, std::abs(sdf->getDistance(pos->get())));
+        }
+        catch (PsDO::Errors)
+        {
+        }
+    }
     return min;
 }
 

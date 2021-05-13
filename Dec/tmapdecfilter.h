@@ -3,6 +3,7 @@
 
 #include "imapdec.h"
 #include "imapdecfilter.h"
+#include "psdoconst.h"
 
 namespace PsDO::Dec
 {
@@ -27,8 +28,13 @@ namespace PsDO::Dec
         {
             auto list = m_scene->items();
             if (index < list.size())
-                return dynamic_cast<T *>(list.at(index));
-            return nullptr;
+            {
+                auto result = dynamic_cast<T *>(list.at(index));
+                if (!result)
+                    throw PsDO::Errors::NOT_FOUND;
+                return result;
+            }
+            throw PsDO::Errors::NOT_FOUND;
         }
     };
 }    // namespace PsDO::Dec

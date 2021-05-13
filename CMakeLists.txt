@@ -42,7 +42,7 @@ set(MAP_VIEW_FILES
     Views/MapView/isdfmapvew.h
     Views/MapView/imapuserview.h
     Views/MapView/cylinderview.cpp Views/MapView/cylinderview.h
-#    Views/MapView/rangeringview.h Views/MapView/rangeringview.cpp
+    Views/MapView/rangeringview.h Views/MapView/rangeringview.cpp
 )
 
 set(MAP_FILES
