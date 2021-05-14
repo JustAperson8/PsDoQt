@@ -17,6 +17,7 @@ namespace PsDO::MapUser
 
     public:
         RayM(PsDO::Map::PsDoMap *map = nullptr, const QPointF &pos = { 0, 0 }, const QPointF &rot = { 1, 0 });
+        ~RayM();
         qreal getDistance() override;
 
         void setRot(const QPointF &r) override;

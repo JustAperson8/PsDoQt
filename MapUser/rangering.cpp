@@ -30,7 +30,7 @@ qreal PsDO::MapUser::RangeRing::getMin() const
         {
             auto sdf = map->getSDF(i);
             if (sdf)
-                min = std::min(min, std::abs(sdf->getDistance(pos->get())));
+                min = std::min(min, sdf->getDistance(pos->get()));
         }
         catch (PsDO::Errors)
         {

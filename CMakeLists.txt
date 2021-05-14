@@ -44,6 +44,7 @@ set(MAP_VIEW_FILES
     Views/MapView/cylinderview.cpp Views/MapView/cylinderview.h
     Views/MapView/rangeringview.h Views/MapView/rangeringview.cpp
     Views/MapView/rayview.h Views/MapView/rayview.cpp
+    Views/MapView/cameramview.h Views/MapView/cameramview.cpp
 )
 
 set(MAP_FILES
@@ -57,6 +58,8 @@ set(MAP_USER_FILES
     MapUser/rangering.h MapUser/rangering.cpp
     MapUser/iray.h
     MapUser/raym.h MapUser/raym.cpp
+    MapUser/icamera.h
+    MapUser/cameram.h MapUser/cameram.cpp
     )
 
 add_library(PsDoLib STATIC

@@ -7,6 +7,12 @@ PsDO::MapUser::RayM::RayM(Map::PsDoMap *map, const QPointF &pos, const QPointF &
     this->rot = new PsDO::Dec::AGSRot(rot);
 }
 
+PsDO::MapUser::RayM::~RayM()
+{
+    delete pos;
+    delete rot;
+}
+
 void PsDO::MapUser::RayM::setRot(const QPointF &r)
 {
     rot->set(r);
@@ -51,7 +57,7 @@ qreal PsDO::MapUser::RayM::getDistance()
 {
     cur.setPos(pos->get());
     qreal sum = 0;
-    for (int i = 0; i < 50; ++i)
+    for (int i = 0; i < 10; ++i)
     {
         sum += cur.getMin();
         cur.move(rot->get() * cur.getMin());
