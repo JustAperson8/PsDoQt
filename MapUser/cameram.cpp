@@ -80,7 +80,8 @@ void PsDO::MapUser::CameraM::setSteps(qsizetype steps)
 QVector<qreal> PsDO::MapUser::CameraM::getResult()
 {
     QVector<qreal> vec;
-    PsDO::MapUser::RayM ray(dynamic_cast<PsDO::Map::PsDoMap *>(map), pos->get(), rot->get());
+    PsDO::MapUser::RayM ray(dynamic_cast<PsDO::Map::PsDoMap *>(map), pos->get(),
+                            rot->get() * makeRotator(-(angle / 2)));
     qreal miniAngle = angle / steps;
     for (qsizetype i = 0; i < steps; ++i)
     {

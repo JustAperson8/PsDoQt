@@ -29,9 +29,12 @@ set(SDFS_FILES
 set(DEC_FILES
     Dec/idecpos.h
     Dec/idecrot.h
+    Dec/idecsize.h
     Dec/igs.h
     Dec/agspos.cpp Dec/agspos.h
     Dec/agsrot.h Dec/agsrot.cpp
+    Dec/agssize.h Dec/agssize.cpp
+    Dec/agsrect.h Dec/agsrect.cpp
     Dec/imapdec.h
     Dec/imapdecfilter.h
     Dec/tmapdecfilter.h
@@ -62,6 +65,10 @@ set(MAP_USER_FILES
     MapUser/cameram.h MapUser/cameram.cpp
     )
 
+set(FRONT_VIEW_FILES
+    Views/FrontView/ifrontview.h
+    Views/FrontView/camfrontview.h Views/FrontView/camfrontview.cpp)
+
 add_library(PsDoLib STATIC
     psdoconst.h
     qcomplex.cpp
@@ -72,6 +79,7 @@ add_library(PsDoLib STATIC
     ${DEC_FILES}
     ${MAP_FILES}
     ${MAP_USER_FILES}
+    ${FRONT_VIEW_FILES}
    )
 
 target_link_libraries(PsDoLib PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

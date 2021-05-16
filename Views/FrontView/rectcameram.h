@@ -1,0 +1,4 @@
+#ifndef RECTCAMERAM_H
+#define RECTCAMERAM_H
+
+#endif // RECTCAMERAM_H

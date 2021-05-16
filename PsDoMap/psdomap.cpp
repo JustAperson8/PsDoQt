@@ -3,6 +3,7 @@
 PsDO::Map::PsDoMap::PsDoMap(QGraphicsScene *scene)
 {
     this->scene = scene;
+    fSDF.setScene(scene);
 }
 
 QGraphicsScene *PsDO::Map::PsDoMap::getScene()

@@ -28,10 +28,16 @@ void PsDO::Views::CameraMView::paint(QPainter *painter, const QStyleOptionGraphi
     painter->setPen(QPen(Qt::red, 10));
     auto distances = camera->getResult();
     qreal miniAngle = camera->getAngle() / camera->getSteps();
-    for (qsizetype i = 0; i < camera->getSteps(); ++i)
-        painter->drawPoint(camera->getPos() + (camera->getRot() * PsDO::makeRotator(i * miniAngle)) * distances[i]);
+    //    for (qsizetype i = 0; i < camera->getSteps(); ++i)
+    //        painter->drawPoint(camera->getPos() + (camera->getRot() * PsDO::makeRotator(-(camera->getAngle() / 2)) *
+    //                                               PsDO::makeRotator(i * miniAngle)) *
+    //                                                  distances[i]);
     painter->setPen(QPen(Qt::blue, 5));
     painter->drawPoint(camera->getPos());
     painter->setPen(QPen(Qt::black, 2));
     painter->drawLine(camera->getPos(), camera->getPos() + camera->getRot() * 3000);
+    painter->drawLine(camera->getPos(),
+                      camera->getPos() + camera->getRot() * makeRotator(camera->getAngle() / 2) * 3000);
+    painter->drawLine(camera->getPos(),
+                      camera->getPos() + camera->getRot() * makeRotator(-(camera->getAngle() / 2)) * 3000);
 }
